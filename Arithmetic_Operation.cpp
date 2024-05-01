@@ -19,7 +19,7 @@ int main()
     cout << "Enter your name: ";
     getline(cin >> ws, yourname); 
 
-    ofstream outputFile; // file opens
+    std::ofstream outputFile; // file opens
     outputFile.open(yourname + ".txt"); 
 
     // Loop for user data 
@@ -104,6 +104,14 @@ int main()
     cout << "Division: " << divisionCount << endl;
     cout << "Modulo: " << moduloCount << endl;
     cout << "Total: " << totalCount << endl;
+
+    // Writing output to file
+    outputFile << "Addition: " << additionCount << endl;
+    outputFile << "Subtraction: " << subtractionCount << endl;
+    outputFile << "Multiplication: " << multiplicationCount << endl;
+    outputFile << "Division: " << divisionCount << endl;
+    outputFile << "Modulo: " << moduloCount << endl;
+    outputFile << "Total: " << totalCount << endl;
 
     outputFile.close();
 
